@@ -1,0 +1,9 @@
+SftMembership.web/.vs/
+
+SftMembership.web/bin/
+SftMembership.web/obj/
+.coveralls.*
+appveyor.yml
+coverage/
+coverage.bat
+.idea*

@@ -1,0 +1,22 @@
+﻿@model UserDetialViewModel
+@{
+    ViewData["Title"] = "ConfirmEmail";
+}
+
+<h1>
+    @ViewBag.Message
+</h1>
+
+<div class="container justify-content-lg-center">
+    <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">UserName: @Model.UserName</li>
+            <li class="list-group-item">FirstName: @Model.FirstName</li>
+            <li class="list-group-item">Email: @Model.Email</li>
+            <li class="list-group-item">Company: @Model.Company</li>
+            <li class="list-group-item">Current Plan: @Model?.SubscriptionPlan.Name</li>
+        </ul>
+    </div>
+</div>
+
+

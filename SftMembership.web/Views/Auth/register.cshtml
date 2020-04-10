@@ -1,0 +1,66 @@
+﻿@model  RegisterViewModel
+ 
+@{
+    ViewData["Title"] = "register";
+}
+
+<div class="jumbotron mt-2">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <form asp-controller="Auth" asp-action="register" method="post">
+                    <div asp-validation-summary="All"></div>
+                    <h2 class="text-center text-primary">SFT Membership Registration</h2>
+                    <div class="form-group">
+                        <label class="control-label">Select Plan:</label>
+                        <label class="radio-inline ml-2">
+                            <input type="radio" class="mr-2" asp-for="SubscriptionPlanName" value="Solo" checked>Solo
+                        </label>
+                        <label class="radio-inline ml-2">
+                            <input type="radio" class="mr-2" asp-for="SubscriptionPlanName" value="Multi User">Multi User
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="User Name" asp-for="UserName">
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="First Name" asp-for="FirstName">
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name" asp-for="LastName">
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email" asp-for="Email">
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Company" asp-for="Company">
+                        <span asp-validation-for="Company" class="text-danger"></span>
+
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password" asp-for="Password">
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password" asp-for="ConfirmPassword">
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <button class="btn-lg btn-block btn-success">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
